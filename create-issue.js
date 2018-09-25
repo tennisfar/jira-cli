@@ -1,5 +1,5 @@
 const inquirer = require('inquirer')
-const sendToJira = require('./sendToJira')
+const sendToJira = require('./send-to-jira')
 const settings = require('./settings')
 
 var questions = [{
