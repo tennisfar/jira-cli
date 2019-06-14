@@ -33,22 +33,22 @@ var questions = [{
       return input.length > 0
     }
   },
-  {
-    type: 'list',
-    name: 'storypoints',
-    message: 'Story points?',
-    choices: [
-      '0',
-      '0.5',
-      '1',
-      '2',
-      '3',
-      '5',
-      '8',
-      '13',
-      '20',
-    ]
-  },
+  // {
+  //   type: 'list',
+  //   name: 'storypoints',
+  //   message: 'Story points?',
+  //   choices: [
+  //     '0',
+  //     '0.5',
+  //     '1',
+  //     '2',
+  //     '3',
+  //     '5',
+  //     '8',
+  //     '13',
+  //     '20',
+  //   ]
+  // },
   {
     type: 'list',
     name: 'assignee',
@@ -118,7 +118,7 @@ const letsGoJira = (answers) => {
       'customfield_13100': {
         value: answers.projektnr
       },
-      'customfield_10003': parseFloat(answers.storypoints)
+      // 'customfield_10003': parseFloat(answers.storypoints)
     }
   }
 
