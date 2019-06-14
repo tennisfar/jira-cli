@@ -4,7 +4,7 @@ const settings = require('./settings')
 
 const sendToJira = (formData, updateExistingIssue = null) => {
   const options = {
-    url: `${settings.jira.url}/jira/rest/api/2/issue/`,
+    url: `${settings.jira.url}/rest/api/2/issue/`,
     method: 'POST',
     headers: {
       'A': null,
@@ -40,7 +40,7 @@ const sendToJira = (formData, updateExistingIssue = null) => {
         }
         console.log('Errors:', errors)
       } else {
-        console.log(`Meta: ${settings.jira.url}/jira/rest/api/2/issue/${body.key}/editmeta`)
+        console.log(`Meta: ${settings.jira.url}/rest/api/2/issue/${body.key}/editmeta`)
         opn(`${settings.jira.url}/browse/${body.key}`)
       }
     }
