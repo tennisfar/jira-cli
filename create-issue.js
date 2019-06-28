@@ -69,6 +69,15 @@ var questions = [{
       {
         name: 'Backend'
       },
+      {
+        name: 'Avalon'
+      },
+      {
+        name: 'Cards'
+      },
+      {
+        name: 'Dokumentation'
+      },
     ],
   },
   {
@@ -87,7 +96,7 @@ var questions = [{
     message: 'Projektnr?',
     choices: [
       '03.00437 BAU Digital and Ecommerce',
-      '03.00385.05 Bingo',
+      // '03.00385.05 Bingo',
     ]
   },
 ];
