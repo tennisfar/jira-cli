@@ -27,19 +27,31 @@ var questions = [{
   {
     type: 'input',
     name: 'summary',
-    message: 'Summary?',
+    message: 'Title?',
     default: '',
     validate(input) {
       return input.length > 0
     }
   },
   {
-    type: 'input',
+    type: 'confirm',
+    name: 'addDescription',
+    message: 'Add description?',
+    default: 'n',
+    validate(input) {
+      return input.length > 0
+    }
+  },
+  {
+    type: 'editor',
     name: 'description',
     message: 'Description?',
     default: '',
     validate(input) {
       return input.length > 0
+    },
+    when(answers) {
+      return answers.addDescription === true
     }
   },
   // {
