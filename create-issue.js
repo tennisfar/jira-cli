@@ -33,6 +33,15 @@ var questions = [{
       return input.length > 0
     }
   },
+  {
+    type: 'input',
+    name: 'description',
+    message: 'Description?',
+    default: '',
+    validate(input) {
+      return input.length > 0
+    }
+  },
   // {
   //   type: 'list',
   //   name: 'storypoints',
@@ -96,7 +105,7 @@ var questions = [{
     message: 'Projektnr?',
     choices: [
       '03.00437 BAU Digital and Ecommerce',
-      // '03.00385.05 Bingo',
+      '03.00421 IT BAU Web (service)',
     ]
   },
 ];
@@ -114,6 +123,7 @@ const letsGoJira = (answers) => {
       'customfield_11400': {
         'value': settings.jira.board,
       },
+      'description': answers.description,
       'assignee': {
         'name': answers.assignee === 'Unassigned' ? '' : answers.assignee
       },
@@ -127,7 +137,9 @@ const letsGoJira = (answers) => {
       'customfield_13100': {
         value: answers.projektnr
       },
-      // 'customfield_10003': parseFloat(answers.storypoints)
+      // 'customfield_10003': {
+      //   'value': parseFloat(answers.storypoints)
+      // }
     }
   }
 
